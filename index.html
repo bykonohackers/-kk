@@ -1,0 +1,151 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>𝕯ՄՇk</title>
+  <link rel="icon" type="image/jpeg" href="https://fodurnuo.sirv.com/api/Picsart_25-06-29_20-20-11-841.jpg">
+  <style>
+    *{margin:0;padding:0;box-sizing:border-box}
+    body{min-height:100vh;display:flex;flex-direction:column;align-items:center;justify-content:center;background:linear-gradient(135deg,#000,#1a1a1a,#000);color:#fff;padding:1.5rem;font-family:system-ui,-apple-system,sans-serif;line-height:1.6}
+    .container{max-width:1200px;width:100%}
+    
+    /* Animations */
+    .fade-in{animation:fadeIn 1.2s ease-out}
+    @keyframes fadeIn{from{opacity:0;transform:translateY(20px)}to{opacity:1;transform:translateY(0)}}
+    .slide-up{animation:slideUp 1s ease forwards}
+    @keyframes slideUp{from{transform:translateY(40px);opacity:0}to{transform:translateY(0);opacity:1}}
+    .zoom-in{animation:zoomIn 1.3s ease forwards}
+    @keyframes zoomIn{from{transform:scale(.9);opacity:0}to{transform:scale(1);opacity:1}}
+    
+    /* Utilities */
+    .neon-purple{text-shadow:0 0 10px #ff00ff,0 0 20px #ff00ff;color:#ff00ff}
+    .btn{background:#ff00ff;color:#000;padding:.75rem 1.5rem;border:none;border-radius:2rem;font-size:.875rem;font-weight:600;cursor:pointer;transition:all .3s ease;text-decoration:none;display:inline-block}
+    .btn:hover{background:#cc00cc;transform:scale(1.05)}
+    .btn-sm{padding:.5rem 1rem;font-size:.75rem}
+    .btn-dark{background:#000;color:#fff}
+    .btn-dark:hover{background:#333}
+    
+    /* Navigation */
+    nav{display:flex;justify-content:space-between;align-items:center;margin-bottom:3rem;width:100%;padding:0 1rem}
+    nav h1{font-size:2rem;font-weight:700;letter-spacing:1px}
+    nav ul{display:none;gap:2rem;list-style:none}
+    nav ul li{color:#ccc;font-size:.875rem;cursor:pointer;transition:color .3s}
+    nav ul li:hover{color:#ff00ff}
+    @media(min-width:768px){nav ul{display:flex}}
+    
+    /* Grid */
+    .grid{display:grid;gap:2rem;grid-template-columns:1fr;margin-bottom:3rem}
+    @media(min-width:768px){.grid{grid-template-columns:repeat(3,1fr);gap:2.5rem}}
+    
+    /* Cards */
+    .card{border-radius:1.5rem;background:linear-gradient(180deg,rgba(55,65,81,.7),rgba(0,0,0,.9));overflow:hidden;box-shadow:0 25px 50px -12px rgba(0,0,0,.5);border:1px solid rgba(55,65,81,.4);display:flex;flex-direction:column;transition:transform .3s ease;height:auto;min-height:500px}
+    .card:hover{transform:translateY(-5px)}
+    .card-header{padding:1rem;display:flex;justify-content:space-between;align-items:center;font-size:.875rem;opacity:.8}
+    .card-brand{color:#ff00ff;font-weight:700;text-transform:uppercase}
+    .card-icons{display:flex;gap:.75rem}
+    .icon{width:2rem;height:2rem;border-radius:50%;background:#374151;display:flex;align-items:center;justify-content:center;cursor:pointer;transition:background .3s}
+    .icon:hover{background:#4b5563}
+    .card-content{padding:0 1.5rem 1.5rem;display:flex;flex-direction:column;gap:1.5rem;flex-grow:1}
+    .card-title{font-size:1.5rem;font-weight:600;text-align:center;margin-bottom:1rem}
+    .img-container{position:relative;border-radius:1rem;overflow:hidden}
+    .img-container img{width:100%;height:18rem;object-fit:cover;transition:transform .5s ease}
+    .img-container:hover img{transform:scale(1.05)}
+    .badge{position:absolute;top:.75rem;right:.75rem;background:#ff44ff;color:#000;padding:.25rem .75rem;font-size:.75rem;border-radius:1rem;font-weight:700}
+    .brand-section{border-radius:1rem;background:linear-gradient(180deg,#111,#000);display:flex;flex-direction:column;align-items:center;justify-content:center;padding:2rem;gap:1.5rem;border:1px solid rgba(55,65,81,.5);transition:box-shadow .3s;margin-top:auto}
+    .brand-section:hover{box-shadow:0 10px 25px -3px rgba(0,0,0,.3)}
+    .brand-logo{width:5rem;opacity:.8;filter:brightness(0)invert(1)}
+    .text-lg{font-size:1.875rem;font-weight:800;text-align:center}
+    .text-sm{font-size:.875rem;color:#9ca3af;text-align:center;line-height:1.5}
+    .text-xl{font-size:2.25rem;font-weight:800}
+    .text-2xl{font-size:3rem;font-weight:800;font-style:italic;text-shadow:0 2px 4px rgba(0,0,0,.5)}
+    .white-section{background:#4a4a4a;color:#fff;border-radius:1.5rem 1.5rem 0 0;padding:2rem;margin-top:auto}
+    .white-section .text-xl{font-size:2.5rem}
+    footer{margin-top:4rem;color:#6b7280;font-size:.75rem;text-align:center;padding:2rem 0}
+    
+    /* Performance optimizations */
+    img{will-change:transform}
+    .card,.btn{will-change:transform}
+  </style>
+</head>
+<body>
+  <!-- Navbar -->
+  <nav class="container fade-in">
+    <h1 class="neon-purple">ՏͲϴᎡᎬ</h1>
+    <ul>
+      <li>Home</li>
+      <li>Collections</li>
+      <li>Sustainability</li>
+      <li>Contact</li>
+    </ul>
+    <a href="https://t.me/+3n4AN6VYv61kMzkx" target="_blank" class="btn btn-sm">Join</a>
+  </nav>
+
+  <!-- Main Cards -->
+  <div class="container grid fade-in">
+    <!-- Card 1 -->
+    <div class="card slide-up">
+      <div class="card-header">
+        <span class="card-brand">𝕯ՄՇk ՏͲϴᎡᎬ</span>
+        <div class="card-icons">
+          <div class="icon">👤</div>
+          <div class="icon">⋮</div>
+        </div>
+      </div>
+      <div class="card-content">
+        <h2 class="card-title neon-purple">OLÁ AMIGO</h2>
+        <div class="img-container zoom-in">
+          <img src="https://fodurnuo.sirv.com/api/Picsart_25-08-28_23-02-46-951.png" width="736" height="1103" alt="" />
+          <span class="badge">NEW</span>
+        </div>
+        <p class="text-lg">𝕯ՄՇk</p>
+        <p class="text-sm">ACESSE NOSSO GRUPO EXCLUSIVO</p>
+        <div class="brand-section">
+          <img src="https://fodurnuo.sirv.com/api/Picsart_25-06-29_20-20-11-841.jpg" alt="𝕯ՄՇk logo" style="border-radius: 50%; width: 4rem; height: 4rem; object-fit: cover;" />
+          <a href="https://t.me/+3n4AN6VYv61kMzkx" target="_blank" class="btn btn-sm">𝕯ՄՇk</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Card 2 -->
+    <div class="card slide-up">
+      <div class="card-header">
+        <span class="card-brand">𝕯ՄՇk ՏͲϴᎡᎬ</span>
+        <a href="https://t.me/+3n4AN6VYv61kMzkx" target="_blank" class="btn btn-sm btn-dark">Join</a>
+      </div>
+      <div class="img-container zoom-in">
+        <img src="https://fodurnuo.sirv.com/api/d14e9209e7f130a06a5dc69cbce30954.jpg" loading="lazy" />
+        <h2 class="text-2xl neon-purple" style="position:absolute;bottom:2.5rem;left:2.5rem"></h2>
+      </div>
+      <div class="white-section slide-up">
+        <p class="text-xl">97%</p>
+        <p class="text-sm" style="color:#ccc;margin-top:.5rem">DE APROVAÇÃO DOS CLIENTES SATISFEITOS</p>
+        <a href="https://t.me/+3n4AN6VYv61kMzkx" target="_blank" class="btn btn-dark btn-sm" style="margin-top:1.25rem">entrar na 𝕯ՄՇk ՏͲϴᎡᎬ</a>
+      </div>
+    </div>
+
+    <!-- Card 3 -->
+    <div class="card slide-up">
+      <div class="card-header">
+        <span class="card-brand">𝕯ՄՇk</span>
+        <a href="https://t.me/+3n4AN6VYv61kMzkx" target="_blank" class="btn btn-sm btn-dark">Join</a>
+      </div>
+      <div class="img-container zoom-in">
+        <img src="https://fodurnuo.sirv.com/api/c7f67103559cc03de624083d435629c1.jpg" loading="lazy" />
+        <h2 class="text-2xl neon-purple" style="position:absolute;bottom:1.5rem;left:1.5rem"></h2>
+      </div>
+      <div class="white-section slide-up">
+        <p class="text-xl">Produts</p>
+        <p class="text-sm" style="color:#ccc;margin-top:.5rem">Consultavel,NFKS,BOTS,puxadas</p>
+        <a href="https://t.me/+3n4AN6VYv61kMzkx" target="_blank" class="btn btn-dark btn-sm" style="margin-top:1.25rem">DESCOBRIR MAIS</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer class="fade-in">
+    © 2025 𝕯ՄՇk Concept. Built with passion for futuristic fashion.
+  </footer>
+</body>
+</html>
